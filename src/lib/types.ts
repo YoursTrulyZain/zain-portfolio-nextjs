@@ -29,3 +29,8 @@ export type ThemeContextType = {
   theme: Theme;
   toggleTheme: () => void;
 };
+
+export type ContactFormEmailProps = {
+  message: string;
+  senderEmail: string;
+};
