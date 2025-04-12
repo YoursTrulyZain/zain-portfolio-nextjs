@@ -1,6 +1,10 @@
 import corpcommentImg from "@/../public/corpcomment.png";
 import rmtdevImg from "@/../public/rmtdev.png";
 import wordanalyticsImg from "@/../public/wordanalytics.png";
+import React from "react";
+import { CgWorkAlt } from "react-icons/cg";
+import { FaReact } from "react-icons/fa";
+import { LuGraduationCap } from "react-icons/lu";
 
 export const navLinks = [
   {
@@ -73,4 +77,31 @@ export const skillsData = [
   "Docker",
   "CI/CD",
   "AWS",
+] as const;
+
+export const experiencesData = [
+  {
+    title: "Graduated college",
+    location: "Ottawa, ON, Canada",
+    description:
+      "Graduated with honors after a 3 year Computer Engineering Program from Algonquin College. Achieved deans list every semester.",
+    icon: React.createElement(LuGraduationCap),
+    date: "April, 2022",
+  },
+  {
+    title: "Front-End Developer",
+    location: "Remote",
+    description:
+      "I worked as an Angular front-end developer for a startup named Caremada where I designed and implementd a real time chat page, a calendar page that tracked user appointments and a search page with sorting.",
+    icon: React.createElement(CgWorkAlt),
+    date: "September, 2022 - March, 2023",
+  },
+  {
+    title: "Full-Stack Developer",
+    location: "Remote",
+    description:
+      "Developed a financial web app for a startup named FirePools where users can input their financial data, make calculations and recieve insights. I worked as part of a team where we built the front end and back end using C# and the .NET framework.",
+    icon: React.createElement(FaReact),
+    date: "May, 2023 - September, 2023",
+  },
 ] as const;

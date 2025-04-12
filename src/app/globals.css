@@ -6,3 +6,11 @@
     linear-gradient(to right, #eef2ff 1px, transparent 1px),
     linear-gradient(to bottom, #eef2ff 1px, transparent 1px);
 }
+
+html {
+  --line-color: #000000;
+}
+
+html.dark {
+  --line-color: rgba(255, 255, 255);
+}
