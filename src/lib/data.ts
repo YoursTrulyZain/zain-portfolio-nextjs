@@ -2,9 +2,9 @@ import corpcommentImg from "@/../public/corpcomment.png";
 import rmtdevImg from "@/../public/rmtdev.png";
 import wordanalyticsImg from "@/../public/wordanalytics.png";
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
+import { FaAngular } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
+import { SiDotnet } from "react-icons/si";
 
 export const navLinks = [
   {
@@ -93,7 +93,7 @@ export const experiencesData = [
     location: "Remote",
     description:
       "I worked as an Angular front-end developer for a startup named Caremada where I designed and implementd a real time chat page, a calendar page that tracked user appointments and a search page with sorting.",
-    icon: React.createElement(CgWorkAlt),
+    icon: React.createElement(FaAngular),
     date: "September, 2022 - March, 2023",
   },
   {
@@ -101,7 +101,7 @@ export const experiencesData = [
     location: "Remote",
     description:
       "Developed a financial web app for a startup named FirePools where users can input their financial data, make calculations and recieve insights. I worked as part of a team where we built the front end and back end using C# and the .NET framework.",
-    icon: React.createElement(FaReact),
+      icon: React.createElement(SiDotnet),
     date: "May, 2023 - September, 2023",
   },
 ] as const;

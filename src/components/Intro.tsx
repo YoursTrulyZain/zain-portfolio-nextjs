@@ -35,7 +35,7 @@ function Intro() {
               height="192"
               quality={100}
               priority={true}
-              className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-black shadow-xl"
+              className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-black dark:border-white shadow-xl"
             />
           </motion.div>
 
@@ -54,7 +54,7 @@ function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <p className="text-gray-700">
+        <p className="dark:text-white">
           <span className="font-bold">Hello World, I'm Zain</span>, a{" "}
           <strong className="text-blue-500 font-bold">Software Engineer</strong>{" "}
           with a <strong className=" font-semibold">STRONG</strong> foundation
@@ -73,7 +73,7 @@ function Intro() {
       </motion.h1>
 
       <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-4 px-4 text-lg font-medium"
+        className="flex flex-col sm:flex-row items-center justify-center gap-6 px-4 text-lg font-medium"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -93,7 +93,7 @@ function Intro() {
         </Link>
 
         <a
-          className="group bg-black text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack"
+          className="group bg-black dark:bg-white text-white dark:text-black px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer"
           href="/ZainResume2024Mk10-1.pdf"
           download
         >
@@ -102,7 +102,7 @@ function Intro() {
         </a>
 
         <a
-          className="bg-black p-4 text-white hover:text-blue-500 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack"
+          className="bg-black dark:bg-white p-4 text-white dark:text-black hover:text-blue-500 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer"
           href="https://www.linkedin.com/in/zainsarfraz/"
           target="_blank"
         >
@@ -110,7 +110,7 @@ function Intro() {
         </a>
 
         <a
-          className="bg-black p-4 text-white flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-fuchsia-500 active:scale-105 transition cursor-pointer borderBlack"
+          className="bg-black dark:bg-white p-4 text-white dark:text-black flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-fuchsia-500 active:scale-105 transition cursor-pointer "
           href="https://github.com/YoursTrulyZain"
           target="_blank"
         >
