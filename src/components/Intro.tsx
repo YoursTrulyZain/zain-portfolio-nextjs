@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import profilepic from "@/../public/dr.-nefario-costume.jpg";
+import profilepic from "@/../public/test-profile-pic.jpeg";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
@@ -26,7 +26,7 @@ function Intro() {
               height="192"
               quality={100}
               priority={true}
-              className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
+              className="h-24 w-24 rounded-full object-cover border-[0.35rem] border-black shadow-xl"
             />
           </motion.div>
 
@@ -45,13 +45,22 @@ function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello World, I'm Zain.</span> I'm a{" "}
-        <span className="font-bold">software engineer</span> with a{" "}
-        <span className="font-bold">STRONG</span> foundation in{" "}
-        <span className="italic">web development and cloud infrastructure</span>
-        . My focus is <span className="underline">React (Next.js)</span> for
-        front end and <span className="underline">Java (Spring Boot)</span> for
-        back end.
+        <p className="text-gray-700">
+          <span className="font-bold">Hello World, I'm Zain</span>, a{" "}
+          <strong className="text-blue-500 font-bold">Software Engineer</strong>{" "}
+          with a <strong className=" font-semibold">STRONG</strong> foundation
+          in <span className="italic underline">web development</span>.
+          <br />
+          My focus is{" "}
+          <strong className="text-purple-600 underline">
+            React (Next.js)
+          </strong>{" "}
+          for the frontend and{" "}
+          <strong className="text-blue-600 underline">
+            Java (Spring Boot)
+          </strong>{" "}
+          for the backend.
+        </p>
       </motion.h1>
 
       <motion.div
@@ -64,14 +73,14 @@ function Intro() {
       >
         <Link
           href="#contact"
-          className="group bg-[#50C878] text-black px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-[#40E0D0] active:scale-105 transition"
+          className="group bg-[#00BFFF] text-black px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-[#40E0D0] active:scale-105 transition"
         >
           Contact me here{" "}
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
 
         <a
-          className="group bg-white text-black px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack"
+          className="group bg-black text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack"
           href="/CV.pdf"
           download
         >
@@ -80,7 +89,7 @@ function Intro() {
         </a>
 
         <a
-          className="bg-white p-4 text-gray-700 hover:text-blue-500 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack"
+          className="bg-black p-4 text-white hover:text-blue-500 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack"
           href="https://linkedin.com"
           target="_blank"
         >
@@ -88,7 +97,7 @@ function Intro() {
         </a>
 
         <a
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-fuchsia-500 active:scale-105 transition cursor-pointer borderBlack"
+          className="bg-black p-4 text-white flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-fuchsia-500 active:scale-105 transition cursor-pointer borderBlack"
           href="https://github.com"
           target="_blank"
         >

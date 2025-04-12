@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+.bgGrid {
+  background-size: 50px 50px;
+  background-image:
+    linear-gradient(to right, #eef2ff 1px, transparent 1px),
+    linear-gradient(to bottom, #eef2ff 1px, transparent 1px);
+}
