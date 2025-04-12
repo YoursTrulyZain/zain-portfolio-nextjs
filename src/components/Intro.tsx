@@ -8,10 +8,19 @@ import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
+import { useSectionInView } from "@/lib/hooks";
+import { useActiveSectionContext } from "@/context/ActiveSectionContextProvider";
 
 function Intro() {
+  const { ref } = useSectionInView("Home", 0.5);
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+
   return (
-    <section className="max-w-[50rem] text-center scroll-mt-[100rem] mb-28 sm:mb-40">
+    <section
+      ref={ref}
+      id="home"
+      className="max-w-[50rem] text-center scroll-mt-[100rem] mb-28 sm:mb-40"
+    >
       <div className="flex items-center justify-center">
         <div className="relative">
           <motion.div
@@ -74,6 +83,10 @@ function Intro() {
         <Link
           href="#contact"
           className="group bg-[#00BFFF] text-black px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-[#40E0D0] active:scale-105 transition"
+          onClick={() => {
+            setActiveSection("Contact");
+            setTimeOfLastClick(Date.now());
+          }}
         >
           Contact me here{" "}
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
@@ -81,7 +94,7 @@ function Intro() {
 
         <a
           className="group bg-black text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack"
-          href="/CV.pdf"
+          href="/ZainResume2024Mk10-1.pdf"
           download
         >
           Download Resume{" "}
@@ -90,7 +103,7 @@ function Intro() {
 
         <a
           className="bg-black p-4 text-white hover:text-blue-500 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack"
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/in/zainsarfraz/"
           target="_blank"
         >
           <BsLinkedin />
@@ -98,7 +111,7 @@ function Intro() {
 
         <a
           className="bg-black p-4 text-white flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-fuchsia-500 active:scale-105 transition cursor-pointer borderBlack"
-          href="https://github.com"
+          href="https://github.com/YoursTrulyZain"
           target="_blank"
         >
           <FaGithubSquare />

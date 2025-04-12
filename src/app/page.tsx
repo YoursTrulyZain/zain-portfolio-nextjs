@@ -1,11 +1,9 @@
 import About from "@/components/About";
 import Experience from "@/components/Experience";
-import Footer from "@/components/Footer";
 import Intro from "@/components/Intro";
 import Projects from "@/components/Projects";
 import SectionDivider from "@/components/SectionDivider";
 import Skills from "@/components/Skills";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -16,12 +14,6 @@ export default function Home() {
       <Projects></Projects>
       <Skills></Skills>
       <Experience></Experience>
-      <Footer></Footer>
-
-      {/* <About></About>
-        <TimeLine></TimeLine>
-        <Projects></Projects>
-        <Contact></Contact> */}
     </main>
   );
 }
