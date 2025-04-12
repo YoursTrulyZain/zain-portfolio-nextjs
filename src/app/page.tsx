@@ -1,5 +1,6 @@
 import About from "@/components/About";
 import Experience from "@/components/Experience";
+import Footer from "@/components/Footer";
 import Intro from "@/components/Intro";
 import Projects from "@/components/Projects";
 import SectionDivider from "@/components/SectionDivider";
@@ -15,6 +16,7 @@ export default function Home() {
       <Projects></Projects>
       <Skills></Skills>
       <Experience></Experience>
+      <Footer></Footer>
 
       {/* <About></About>
         <TimeLine></TimeLine>
