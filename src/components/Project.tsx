@@ -3,8 +3,17 @@ import { ProjectProps } from "@/lib/types";
 import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useRef } from "react";
 import Image from "next/image";
+import { BsArrowRight } from "react-icons/bs";
+import Link from "next/link";
 
-function Project({ title, description, tags, imageUrl }: ProjectProps) {
+function Project({
+  title,
+  description,
+  tags,
+  imageUrl,
+  demoLink,
+  codeLink,
+}: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({
@@ -16,18 +25,40 @@ function Project({ title, description, tags, imageUrl }: ProjectProps) {
 
   return (
     <motion.div
-    ref = {ref}
+      ref={ref}
       style={{
         scale: scaleProgess,
         opacity: opacityProgess,
       }}
-      className="group mb-3 sm:mb-8 last:mb-0"
+      className="group mb-3 md:mb-8 last:mb-0"
     >
-      <section className="bg-black dark:bg-white max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-[#00BFFF] transition sm:group-even:pl-8 text-white dark:text-black hover:text-black">
-        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem] ">
+      <section className="bg-black dark:bg-white max-w-[50rem] border border-black/5 rounded-lg overflow-hidden md:pr-8 relative md:h-[25rem] hover:bg-[#00BFFF] transition text-white dark:text-black hover:text-black">
+        <div className="pt-4 pb-7 px-5 md:pl-10 md:pr-2 md:pt-10 md:max-w-[50%] flex flex-col gap-4">
           <h3 className="text-2xl font-semibold">{title}</h3>
-          <p className="mt-2 leading-relaxed ">{description}</p>
-          <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
+          <p className=" leading-relaxed ">{description}</p>
+          <div className="flex gap-3 ">
+            {demoLink && (
+              <Link
+                href={demoLink}
+                className="group bg-white dark:bg-black dark:text-white text-black px-7 py-3 flex items-center gap-2 rounded-md outline-none focus:scale-110 hover:scale-110 hover:bg-amber-500 dark:hover:text-black active:scale-105 transition"
+                target="_blank"
+              >
+                View App{" "}
+                <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
+              </Link>
+            )}
+            {codeLink && (
+              <Link
+                href={codeLink}
+                className="group bg-white dark:bg-black dark:text-white text-black px-7 py-3 flex items-center gap-2 rounded-md outline-none focus:scale-110 hover:scale-110 hover:bg-amber-500 dark:hover:text-black active:scale-105 transition"
+                target="_blank"
+              >
+                View Code{" "}
+                <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
+              </Link>
+            )}
+          </div>
+          <ul className="flex flex-wrap mt-4 gap-2 md:mt-auto">
             {tags.map((tag, index) => (
               <li
                 className="bg-white dark:bg-black px-3 py-1 text-[0.7rem] uppercase tracking-wider text-black dark:text-white rounded-full font-semibold"
@@ -43,7 +74,28 @@ function Project({ title, description, tags, imageUrl }: ProjectProps) {
           src={imageUrl}
           alt="Project I worked on"
           quality={95}
-          className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
+          className="absolute hidden md:block top-22 -right-35 w-[31rem] rounded-t-lg shadow-white dark:shadow-black shadow-2xl
+        transition 
+        group-hover:scale-[1.04]
+        group-hover:-translate-x-3
+        group-hover:translate-y-3
+        group-hover:-rotate-2"
+        />
+      </section>
+    </motion.div>
+  );
+}
+
+export default Project;
+
+{
+  /* <section className="bg-black dark:bg-white max-w-[50rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[25rem] hover:bg-[#00BFFF] transition sm:group-even:pl-8 text-white dark:text-black hover:text-black"></section>
+<div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem] "></div>
+<Image
+          src={imageUrl}
+          alt="Project I worked on"
+          quality={95}
+          className="absolute hidden sm:block top-22 -right-35 w-[31rem] rounded-t-lg shadow-white dark:shadow-black shadow-2xl
         transition 
         group-hover:scale-[1.04]
         group-hover:-translate-x-3
@@ -54,11 +106,6 @@ function Project({ title, description, tags, imageUrl }: ProjectProps) {
         group-even:group-hover:translate-y-3
         group-even:group-hover:rotate-2
 
-        group-even:right-[initial] group-even:-left-40"
-        />
-      </section>
-    </motion.div>
-  );
+        group-even:right-[initial] group-even:-left-45"
+        /> */
 }
-
-export default Project;

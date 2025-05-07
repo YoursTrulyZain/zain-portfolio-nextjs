@@ -53,8 +53,8 @@ function About() {
         My core stack includes: <br />
         <strong className="text-purple-600">React</strong> &{" "}
         <strong className="text-purple-600">Next.js</strong> (frontend),{" "}
-        <strong className="text-blue-600">Java Spring Boot</strong> (backend),
-        and <strong className="text-emerald-600">MySQL</strong> /{" "}
+        <strong className="text-blue-600">TypeScript (Nest.js)</strong>{" "}
+        (backend), and <strong className="text-emerald-600">MySQL</strong> /{" "}
         <strong className="text-emerald-600">PostgreSQL</strong> for databases.{" "}
         <br />I also have a solid understanding of{" "}
         <strong className="text-orange-500">Docker</strong> and{" "}

@@ -1,3 +1,4 @@
+import { StaticImageData } from "next/image";
 import { navLinks, projectsData } from "./data";
 
 export type SectionName = (typeof navLinks)[number]["name"];
@@ -6,7 +7,14 @@ export type SectionHeadingProps = {
   children: React.ReactNode;
 };
 
-export type ProjectProps = (typeof projectsData)[number];
+export type ProjectProps = {
+  title: string;
+  description: string;
+  tags: string[];
+  imageUrl: StaticImageData;
+  demoLink?: string;
+  codeLink?: string;
+};
 
 export type ActiveSectionContextProviderProps = {
   children: React.ReactNode;

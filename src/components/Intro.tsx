@@ -66,7 +66,7 @@ function Intro() {
           </strong>{" "}
           for the frontend and{" "}
           <strong className="text-blue-600 underline">
-            Java (Spring Boot)
+            TypeScript (Nest.js)
           </strong>{" "}
           for the backend.
         </p>

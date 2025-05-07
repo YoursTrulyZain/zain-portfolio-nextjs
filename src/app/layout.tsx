@@ -7,6 +7,7 @@ import ThemeContextProvider from "@/context/ThemeContextProvider";
 import ActiveSectionContextProvider from "@/context/ActiveSectionContextProvider";
 import { Toaster } from "react-hot-toast";
 import ThemeSwitch from "@/components/ThemeSwitch";
+import Lenis from "@studio-freight/lenis/types";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
