@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import profilepic from "@/../public/test-profile-pic.jpeg";
+import profilepic from "@/../public/z2-xl-t.png";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
@@ -40,12 +40,12 @@ function Intro() {
           </motion.div>
 
           <motion.span
-            className="absolute bottom-0 right-0 text-4xl"
+            className="absolute bottom-0 right-0 text-2xl"
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ type: "spring", stiffness: 125, delay: 0.3 }}
           >
-            👀
+            ❤️
           </motion.span>
         </div>
       </div>
