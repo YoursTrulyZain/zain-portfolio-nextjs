@@ -94,7 +94,7 @@ function Intro() {
 
         <a
           className="group bg-black dark:bg-white text-white dark:text-black px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer"
-          href="/ZainResume2024Mk10-1.pdf"
+          href="/zain-resume-fullstack.pdf"
           download
         >
           Download Resume{" "}
