@@ -32,7 +32,7 @@ function Project({
       }}
       className="group mb-3 md:mb-8 last:mb-0"
     >
-      <section className="bg-black dark:bg-white max-w-[50rem] border border-black/5 rounded-lg overflow-hidden md:pr-8 relative md:h-[25rem] hover:bg-[#00BFFF] transition text-white dark:text-black hover:text-black">
+      <section className="bg-blue-200 dark:bg-zinc-800/90 max-w-[50rem] border border-black/5 rounded-lg overflow-hidden md:pr-8 relative md:h-[25rem] hover:bg-amber-500 transition text-black dark:text-white hover:text-black">
         <div className="pt-4 pb-7 px-5 md:pl-10 md:pr-2 md:pt-10 md:max-w-[50%] flex flex-col gap-4">
           <h3 className="text-2xl font-semibold">{title}</h3>
           <p className=" leading-relaxed ">{description}</p>
@@ -40,7 +40,7 @@ function Project({
             {demoLink && (
               <Link
                 href={demoLink}
-                className="group bg-white dark:bg-black dark:text-white text-black px-7 py-3 flex items-center gap-2 rounded-md outline-none focus:scale-110 hover:scale-110 hover:bg-amber-500 dark:hover:text-black active:scale-105 transition"
+                className="group bg-indigo-600 text-white px-7 py-3 flex items-center gap-2 rounded-md outline-none focus:scale-110 hover:scale-110  hover:bg-[#00BFFF] hover:text-black active:scale-105 transition"
                 target="_blank"
               >
                 View App{" "}
@@ -50,7 +50,7 @@ function Project({
             {codeLink && (
               <Link
                 href={codeLink}
-                className="group bg-white dark:bg-black dark:text-white text-black px-7 py-3 flex items-center gap-2 rounded-md outline-none focus:scale-110 hover:scale-110 hover:bg-amber-500 dark:hover:text-black active:scale-105 transition"
+                className="group bg-indigo-600 text-white px-7 py-3 flex items-center gap-2 rounded-md outline-none focus:scale-110 hover:scale-110 hover:bg-[#00BFFF] hover:text-black active:scale-105 transition"
                 target="_blank"
               >
                 View Code{" "}
@@ -61,7 +61,7 @@ function Project({
           <ul className="flex flex-wrap mt-4 gap-2 md:mt-auto">
             {tags.map((tag, index) => (
               <li
-                className="bg-white dark:bg-black px-3 py-1 text-[0.7rem] uppercase tracking-wider text-black dark:text-white rounded-full font-semibold"
+                className="bg-emerald-700 dark:bg-zinc-700 px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full font-semibold"
                 key={index}
               >
                 {tag}

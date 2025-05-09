@@ -21,33 +21,36 @@ function Experience() {
           <React.Fragment key={index}>
             <VerticalTimelineElement
               contentStyle={{
-                background:
-                  theme === "light" ? "#000000" : "rgba(255, 255, 255)",
+                background: theme === "light" ? "#bfdbfe" : "#27272aE6",
                 boxShadow: "none",
                 border: "1px solid rgba(0, 0, 0, 0.05)",
                 textAlign: "left",
                 padding: "1.3rem 2rem",
+                transition: "all 0.1s ease-in-out",
               }}
               contentArrowStyle={{
                 borderRight:
                   theme === "light"
-                    ? "0.4rem solid #000000"
-                    : "0.4rem solid rgba(255, 255, 255)",
+                    ? "0.4rem solid #bfdbfe"
+                    : "0.4rem solid #27272aE6",
               }}
               date={item.date}
               icon={item.icon}
               iconStyle={{
-                background:
-                  theme === "light" ? "black" : "white",
-                color: theme === "light" ? "white" : "black",
+                background: theme === "light" ? "#bfdbfe" : "#27272a",
+                color: theme === "light" ? "black" : "white",
                 boxShadow: "none",
                 border: "3px solid #00BFFF",
                 fontSize: "1.5rem",
               }}
             >
-              <h3 className="font-semibold capitalize text-white dark:text-black">{item.title}</h3>
-              <p className="font-normal !mt-0 text-white dark:text-black">{item.location}</p>
-              <p className="!mt-1 !font-normal text-white dark:text-black">
+              <h3 className="font-semibold capitalize text-black dark:text-white">
+                {item.title}
+              </h3>
+              <p className="font-normal !mt-0 text-black dark:text-white">
+                {item.location}
+              </p>
+              <p className="!mt-1 !font-normal text-black dark:text-white">
                 {item.description}
               </p>
             </VerticalTimelineElement>

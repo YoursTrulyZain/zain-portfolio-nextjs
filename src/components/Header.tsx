@@ -31,7 +31,7 @@ function Header() {
                   className={clsx(
                     "flex w-full items-center justify-center px-3 py-3 hover:text-[#00BFFF] transition",
                     {
-                      "text-gray-950 pointer-events-none ":
+                      "text-white pointer-events-none ":
                         activeSection === link.name,
                     },
                   )}
@@ -45,7 +45,7 @@ function Header() {
 
                   {link.name === activeSection && (
                     <motion.span
-                      className="bg-[#00BFFF] rounded-4xl absolute inset-0 -z-10"
+                      className="bg-indigo-600 rounded-4xl absolute inset-0 -z-10"
                       layoutId="activeSection"
                       transition={{
                         type: "spring",

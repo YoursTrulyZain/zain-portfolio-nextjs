@@ -82,7 +82,7 @@ function Intro() {
       >
         <Link
           href="#contact"
-          className="group bg-[#00BFFF] text-black px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-[#40E0D0] active:scale-105 transition"
+          className="group bg-indigo-600 hover:bg-[#00BFFF] text-white hover:text-black px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());
@@ -93,7 +93,7 @@ function Intro() {
         </Link>
 
         <a
-          className="group bg-black dark:bg-white text-white dark:text-black px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer"
+          className="group bg-black dark:bg-white hover:bg-[#00BFFF] text-white hover:text-black dark:text-black px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer"
           href="/zain-resume-fullstack.pdf"
           download
         >

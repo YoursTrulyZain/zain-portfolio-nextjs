@@ -10,7 +10,7 @@ function About() {
   return (
     <motion.section
       ref={ref}
-      className="max-w-[45rem] text-center leading-8 scroll-mt-28 mb-28 sm:mb-40 dark:text-white"
+      className="max-w-[50rem] text-center leading-8 scroll-mt-28 mb-28 sm:mb-40 dark:text-white text-black dark:bg-zinc-800/90 bg-blue-200 p-8 rounded-lg transition-all duration-300"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
@@ -85,13 +85,13 @@ function About() {
 
       <p className="mb-4">
         Technology isn’t just work to me — it’s a{" "}
-        <strong className="text-green-600">genuine passion</strong>. I actively
-        follow the software space and stay up to date with{" "}
-        <strong className="text-green-600">emerging technologies</strong>. I'm
-        always <strong className="text-green-600">eager to learn</strong> and{" "}
-        <strong className="text-green-600">take on challenges</strong> that push
-        me to <strong className="text-green-600 underline">GROW</strong> both
-        personally and professionally.
+        <strong className="text-emerald-700">genuine passion</strong>. I
+        actively follow the software space and stay up to date with{" "}
+        <strong className="text-emerald-700">emerging technologies</strong>. I'm
+        always <strong className="text-emerald-700">eager to learn</strong> and{" "}
+        <strong className="text-emerald-700">take on challenges</strong> that
+        push me to <strong className="text-emerald-700 underline">GROW</strong>{" "}
+        both personally and professionally.
       </p>
 
       <p className="mb-4">
