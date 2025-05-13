@@ -32,7 +32,10 @@ function Project({
       }}
       className="group mb-3 md:mb-8 last:mb-0"
     >
-      <section className="bg-blue-200 dark:bg-zinc-800/90 max-w-[50rem] border border-black/5 rounded-lg overflow-hidden md:pr-8 relative md:h-[25rem] hover:bg-amber-500 transition text-black dark:text-white hover:text-black">
+      <section
+        className="bg-blue-300/30 backdrop-blur-xl backdrop-saturate-150 
+           border border-black/10 shadow-2xl dark:bg-zinc-800/90 max-w-[50rem] rounded-lg overflow-hidden md:pr-8 relative md:h-[25rem] hover:bg-amber-500 transition text-black dark:text-white hover:text-black"
+      >
         <div className="pt-4 pb-7 px-5 md:pl-10 md:pr-2 md:pt-10 md:max-w-[50%] flex flex-col gap-4">
           <h3 className="text-2xl font-semibold">{title}</h3>
           <p className=" leading-relaxed ">{description}</p>

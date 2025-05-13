@@ -1,19 +1,34 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
-.bgGrid {
+/* .bgGrid {
   background-size: 50px 50px;
   background-image:
     linear-gradient(to right, #eef2ff 1px, transparent 1px),
     linear-gradient(to bottom, #eef2ff 1px, transparent 1px);
+} */
+
+.bgGrid {
+  background-color: #f8fafc; /* light but not pure white */
+  background-size: 50px 50px;
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
 }
 
-.dark .bgGrid  {
+.dark .bgGrid {
+  background-color: #0f172a; /* Tailwind's slate-900 */
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+}
+
+/* .dark .bgGrid {
   background-color: #000000;
   background-image:
-  linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-  linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-}
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+} */
 
 html {
   --line-color: #000000;
@@ -21,7 +36,6 @@ html {
 
 html.dark {
   --line-color: rgba(255, 255, 255);
-  
 }
 
 .borderBlack {

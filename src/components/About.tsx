@@ -10,7 +10,8 @@ function About() {
   return (
     <motion.section
       ref={ref}
-      className="max-w-[50rem] text-center leading-8 scroll-mt-28 mb-28 sm:mb-40 dark:text-white text-black dark:bg-zinc-800/90 bg-blue-200 p-8 rounded-lg transition-all duration-300"
+      className="max-w-[50rem] text-center leading-8 scroll-mt-28 mb-28 sm:mb-40 dark:text-white text-black dark:bg-zinc-800 bg-blue-300/30 backdrop-blur-xl backdrop-saturate-150 
+           border border-black/10 shadow-2xl p-8 rounded-2xl transition-all duration-300 "
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}

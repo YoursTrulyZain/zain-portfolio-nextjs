@@ -21,12 +21,14 @@ function Experience() {
           <React.Fragment key={index}>
             <VerticalTimelineElement
               contentStyle={{
-                background: theme === "light" ? "#bfdbfe" : "#27272aE6",
-                boxShadow: "none",
-                border: "1px solid rgba(0, 0, 0, 0.05)",
+                background: theme === "light" ? "#93c5fd4D" : "#27272aE6",
+                boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+                border: "1px solid rgba(0, 0, 0, 0.1)",
                 textAlign: "left",
                 padding: "1.3rem 2rem",
                 transition: "all 0.1s ease-in-out",
+                backdropFilter: "blur(24px) saturate(1.5)",
+                WebkitBackdropFilter: "blur(24px) saturate(1.5)",
               }}
               contentArrowStyle={{
                 borderRight:
@@ -35,6 +37,9 @@ function Experience() {
                     : "0.4rem solid #27272aE6",
               }}
               date={item.date}
+              style={{
+                color: theme === "light" ? "black" : "white",
+              }}
               icon={item.icon}
               iconStyle={{
                 background: theme === "light" ? "#bfdbfe" : "#27272a",
@@ -68,3 +73,6 @@ export default Experience;
 //                     ? "0.4rem solid #9ca3af"
 //                     : "0.4rem solid rgba(255, 255, 255, 0.5)",
 // theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
+
+// bg-blue-300/30 backdrop-blur-xl backdrop-saturate-150
+//            border border-black/10 shadow-2xl

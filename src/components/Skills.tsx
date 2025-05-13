@@ -8,7 +8,7 @@ import { useSectionInView } from "@/lib/hooks";
 const fadeInAnimationVariants = {
   initial: {
     opacity: 0,
-    y: 100,
+    y: 0,
   },
   animate: (index: number) => ({
     opacity: 1,
