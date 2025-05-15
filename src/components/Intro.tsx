@@ -15,6 +15,21 @@ function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const fadeUpItem = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 },
+  };
+
   return (
     <section
       ref={ref}
@@ -49,28 +64,55 @@ function Intro() {
           </motion.span>
         </div>
       </div>
-      <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
+      <motion.div
+        className="mb-10 mt-4 px-4 text-2xl font-medium leading-relaxed sm:text-4xl"
+        variants={container}
+        initial="hidden"
+        animate="show"
       >
-        <p className="dark:text-white">
-          <span className="font-bold">Hello World, I'm Zain</span>, a{" "}
-          <strong className="text-blue-500 font-bold">Software Engineer</strong>{" "}
-          with a <strong className=" font-semibold">STRONG</strong> foundation
-          in <span className="italic underline">web development</span>.
-          <br />
-          My focus is{" "}
-          <strong className="text-purple-600 underline">
-            React (Next.js)
+        <motion.p
+          className="text-neutral-900 dark:text-white"
+          variants={fadeUpItem}
+        >
+          <span className="font-bold">Hello, I'm Zain</span> — a{" "}
+          <strong className="text-blue-600 dark:text-blue-400 font-semibold">
+            software engineer
           </strong>{" "}
-          for the frontend and{" "}
-          <strong className="text-blue-600 underline">
-            TypeScript (Nest.js)
-          </strong>{" "}
-          for the backend.
-        </p>
-      </motion.h1>
+          specializing in{" "}
+          <span className="italic text-purple-700 dark:text-purple-400">
+            full-stack web development
+          </span>{" "}
+          with{" "}
+          <span className="font-semibold text-yellow-600 dark:text-yellow-400">
+            TypeScript
+          </span>
+          .
+        </motion.p>
+
+        <motion.p
+          className="text-neutral-900 dark:text-white mt-4"
+          variants={fadeUpItem}
+        >
+          I build{" "}
+          <span className="underline decoration-dotted underline-offset-2">
+            responsive interfaces
+          </span>
+          ,{" "}
+          <span className="underline decoration-dotted underline-offset-2">
+            scalable backend systems
+          </span>
+          , and <span className="font-medium">real-world applications</span>{" "}
+          with{" "}
+          <span className="text-green-800 dark:text-green-400 font-semibold">
+            production-grade quality
+          </span>{" "}
+          and{" "}
+          <span className="text-teal-700 dark:text-teal-300 font-semibold">
+            meticulous attention to detail
+          </span>
+          .
+        </motion.p>
+      </motion.div>
 
       <motion.div
         className="flex flex-col sm:flex-row items-center justify-center gap-6 px-4 text-lg font-medium"
