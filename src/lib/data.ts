@@ -7,6 +7,7 @@ import { SiDotnet } from "react-icons/si";
 import cinemaBackendNestjs from "@/../public/cinema-backend-nestjs.png";
 import acmeInc from "@/../public/financial-dashboard-nextjs.png";
 import resumeCreator from "@/../public/resume-creator.png";
+import { IoMdBriefcase } from "react-icons/io";
 export const navLinks = [
   {
     name: "Home",
@@ -122,7 +123,7 @@ export const skillsData = [
 
 export const experiencesData = [
   {
-    title: "Graduated college",
+    title: "Algonquin College - Computer Engineering",
     location: "Ottawa, ON, Canada",
     description:
       "Graduated with honors after a 3 year Computer Engineering Program from Algonquin College. Achieved deans list every semester.",
@@ -130,19 +131,27 @@ export const experiencesData = [
     date: "April, 2022",
   },
   {
-    title: "Front-End Developer",
+    title: "Caremada - Front-End Developer",
     location: "Remote",
     description:
       "Worked as an Angular front-end developer for a startup named Caremada where I designed and implementd a chat page, a calendar page that tracked user appointments and a search page with filtering and sorting.",
     icon: React.createElement(FaAngular),
-    date: "September, 2022 - March, 2023",
+    date: "September, 2022 - April, 2023",
   },
   {
-    title: "Full-Stack Developer",
+    title: "FirePools - Full-Stack Developer",
     location: "Remote",
     description:
       "Developed a web app for a finance startup named FirePools where users can input their financial data, make calculations and recieve insights. I worked as part of a team where we built the front end and back end using C# and the .NET framework.",
     icon: React.createElement(SiDotnet),
-    date: "May, 2023 - September, 2023",
+    date: "July, 2023 - September, 2023",
+  },
+  {
+    title: "Vivin Sales - Full-Stack Developer",
+    location: "Remote",
+    description:
+      "Working as a contract full-stack developer for Vivin Sales, a digital marketing agency. Developing and deploying full-stack web features for multiple client projects, with responsibility across UI, backend, database, and cloud deployment layers.",
+    icon: React.createElement(IoMdBriefcase),
+    date: "September, 2023 - Present",
   },
 ] as const;
